@@ -1,0 +1,65 @@
+/* ========================= main banner ============================= */
+.main-banner{
+    background-image: url(/images/main_banner.jpg);
+    background-size: cover;
+    background-position: 60% center;
+    height: 700px;
+    width: 100%;
+}
+.banner-heading{
+    font-family: 'Gabriola';
+    font-size: 80px;
+    line-height: 70px;
+}
+.banner-p{
+    line-height: 30px;
+}
+.banner-btn{
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.service{
+    background-color: var(--dark);
+}
+/* -------------------------------------------------------------------- */
+/* =========================== Sub banner ============================== */
+.banner-img-1{
+    background-image: url(../images/banner-1.jpg);
+    height: 290px;
+    width: 100%;
+    padding: 0 30px;
+    letter-spacing: 1px;
+}
+.banner-img-2{
+    background-image: url(../images/banner-2.jpg);
+    height: 290px;
+    width: 100%;
+    padding: 0 30px;
+    letter-spacing: 1px;
+}
+.banner-title-1{
+    line-height: 45px;
+}
+.banner-prize{
+    letter-spacing: 1px;
+}
+/* --------------------------------------------------------------------- */
+/* =============================== product ============================= */
+.title{
+    margin-bottom: 40px;
+}
+.title-img{
+    transform: translateY(-10px);
+}
+/* --------------------------------------------------------------------- */
+/* ============================== dimond-banner ======================== */
+.dimond-banner{
+    background-image: url(../images/dimond-banner.jpg);
+    background-position: 60% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 90px 0;
+}
+/* --------------------------------------------------------------------- */

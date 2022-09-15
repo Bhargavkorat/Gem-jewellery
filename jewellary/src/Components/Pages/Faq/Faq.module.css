@@ -1,0 +1,11 @@
+.cardheader {
+    background-color: var(--dark);
+}
+
+.card {
+    margin-bottom: 10px;
+}
+
+.accordion .card {
+    border: none;
+}

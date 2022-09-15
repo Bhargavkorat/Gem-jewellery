@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/header.ejs'); %>
+    <style>
+        .overflowset {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 120px;
+        }
+    </style>
+        <title>Manage ConatactUs</title>
+</head>
+
+<body>
+    <%- include('./partials/navbar.ejs'); %>
+        <%- include('./partials/sidebar.ejs'); %>
+            <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+
+                <div class="row m-0">
+                    <div class="col-12">
+                        <div class="card my-4">
+                            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                                <div class="shadow-primary border-radius-lg pt-4 pb-3" style="background-color: #ba9862;">
+                                    <h3 class="text-white text-capitalize ps-3 ">ConatactUs Details</h3>
+                                </div>
+                            </div>
+                            <div class="p-0">
+                                <table class="table m-0 p-0 mt-4">
+                                    <thead class="table text-white" style="background-color: #ba9862;">
+                                        <tr>
+                                            <th class="text-center">name</th>
+                                            <th class="text-center">email</th>
+                                            <th class="text-center">moblie no</th>
+                                            <th class="text-center">Message</th>
+                                            <th class="text-center">Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <% if(contactus.length) { %>
+                                        <% for(let x of contactus) { %>
+                                            <tr class="align-middle">
+                                               
+                                                <td class="text-center">
+                                                    <%= x.name%>
+                                                </td>
+                                                <td class="text-center">
+                                                    <%= x.email%>
+                                                </td>
+                                                <td class="text-center">
+                                                    <%= x.mobile%>
+                                                </td>
+                                                <td class="text-center overflowset">
+                                                    <%= x.message%>
+                                                </td>
+                                                    <td class="">
+                                                        <form action="/Managecontact" method="get">
+                                                            <a href="Managecontact/<%= x._id %>"
+                                                                class=" text-decoration-none text-black ">
+                                                                <i
+                                                                    class=" material-icons opacity-10 d-flex ms-4 justify-content-center">delete</i>
+                                                            </a>
+                                                        </form>
+                                                    </td>
+                                            </tr>
+                                            <% } %>
+                                                <% } %>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <%- include('./partials/script.ejs'); %>
+
+</body>
+
+</html>

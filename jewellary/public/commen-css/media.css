@@ -1,0 +1,142 @@
+@media only screen and (max-width:1400px){
+    .main-banner{
+        height: 600px;
+    }   
+    .banner-heading{
+        font-size: 75px;
+        line-height: 60px;
+    }
+}
+@media only screen and (max-width:1000px){
+    .banner-heading{
+        font-size: 65px;
+        line-height: 50px;
+    }
+    .header-contact{
+        display: none;
+    }
+    .header-contact-show{
+        display: inline-block;
+    }
+    .dropdown-menu a{
+        color: #fff !important;
+    }
+    .dropdown-menu{
+        background-color: var(--dark);
+    }
+    .dropdown-item{
+        color: #fff;
+        text-align: center;
+    }
+    .m-100{
+        margin-top: 65px;
+    }
+    .dimond-banner{
+        padding: 70px 10px;
+    }
+}
+@media only screen and (max-width:800px){
+    .main-banner{
+        height: 500px;
+    }
+    .banner-heading{
+        font-size: 55px;
+    }
+    .navbar-nav .nav-link{
+        padding: 10px 20px !important;
+    }
+    .welcome{
+        display: none;
+    }
+    .f-12{
+        font-size: 10px;
+    }
+    .f-14{
+        font-size: 12px;
+    }
+    .f-16{
+        font-size: 14px;
+    }
+    .f-18{
+        font-size: 18px;
+    }
+    .f-20{
+        font-size: 18px;
+    }
+    .f-30{
+        font-size: 28px;
+    }
+    .f-34{
+        font-size: 32px;
+    }
+    .f-45{
+        font-size: 43px;
+    }
+    .f-55{
+        font-size: 45px;
+    }
+    .m-100{
+        margin-top: 60px;
+    }
+    .dimond-banner{
+        background-position: left center; 
+        padding: 60px 10px;
+    }
+}
+@media only screen and (max-width:450px){
+    .main-banner{
+        height: 400px;
+    }
+    .banner-heading{
+        font-size: 45px;
+        line-height: 45px;
+    }
+    .f-12{
+        font-size: 8px;
+    }
+    .f-14{
+        font-size: 12px;
+    }
+    .f-16{
+        font-size: 12px;
+    }
+    .f-18{
+        font-size: 14px;
+    }
+    .f-20{
+        font-size: 17px;
+    }
+    .f-30{
+        font-size: 26px;
+    }
+    .f-34{
+        font-size: 30px;
+    }
+    .f-45{
+        font-size: 35px;
+    }
+    .f-55{
+        font-size: 35px;
+    }
+    .header-contact-show{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-top{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-link{
+        text-align: center;
+    }
+    .m-100{
+        margin-top: 50px;
+    }
+    .dimond-banner{
+        padding: 50px 10px;
+    }
+    .footer{
+        background-position: right center;
+    }
+
+}

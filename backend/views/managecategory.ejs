@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/header.ejs'); %>
+        <title>Manage Category</title>
+</head>
+
+<body>
+    <%- include('./partials/navbar.ejs'); %>
+        <%- include('./partials/sidebar.ejs'); %>
+            <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+                <%if(message.length) { %>
+                    <div class="alert alert-success" id="alert">
+                        <%=message%>
+                    </div>
+                    <%}%>
+                        <div class="row m-0">
+                            <div class="col-12">
+                                <div class="card my-4">
+                                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                                        <div class="shadow-primary border-radius-lg pt-4 pb-3"
+                                            style="background-color: #ba9862;">
+                                            <h3 class="text-white text-capitalize ps-3">Insert Category</h3>
+                                        </div>
+                                    </div>
+                                    <form action="/admin/addcategory" method="post">
+                                        <div class="m-3 ps-4 text-dark">
+                                            <div class="mb-3 mt-3 col-8">
+                                                <label for="resname" class=" pt-2 w-25">Category Name:</label>
+                                                <input type="name" class="form-control " id="Category"
+                                                    placeholder="Enter Category Name" name="category" required>
+                                            </div>
+                                            <button type="submit" class="btn btn-secondary"
+                                                style="width: 100px;">Submit</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-0">
+                            <div class="col-12">
+                                <div class="card my-4">
+                                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                                        <div class="shadow-primary border-radius-lg pt-4 pb-3"
+                                            style="background-color: #ba9862;">
+                                            <h3 class="text-white text-capitalize ps-3">Display Categories</h3>
+                                        </div>
+                                    </div>
+                                    <div class="p-5">
+                                        <table class="table m-0 p-0 mt-4">
+                                            <thead class="table text-white" style="background-color:#ba9862;">
+                                                <tr>
+                                                    <th class="text-center"> No</th>
+                                                    <th class="text-center">Category</th>
+                                                    <th class="text-center">Delete</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <% if(category.length) { %>
+                                                    <% for(let [I,C] of category.entries()) { %>
+                                                        <tr class="align-middle">
+                                                            <td class="text-center">
+                                                                <p>
+                                                                    <%= I+1 %>
+                                                                </p>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <%= C.category %>
+                                                            </td> 
+                                                            <td class="">
+                                                                <form action="/Managecategory/id" method="get">
+                                                                    <a href="Managecategory/<%= C._id %>"
+                                                                        class=" text-decoration-none text-black ">
+                                                                        <i
+                                                                            class=" material-icons opacity-10 d-flex ms-4 justify-content-center">delete</i>
+                                                                    </a>
+                                                                </form>
+                                                            </td>
+                                                        </tr>
+                                                        <% } %>
+                                                            <% } %>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+            </main>
+
+            <script>
+                const message = `<%= message %>`
+                if (message.length) {
+                    setTimeout(() => {
+                        var alertNode = document.querySelector('#alert')
+                        alertNode.remove()
+                    }, 3000);
+                }
+            </script>
+            <%- include('./partials/script.ejs'); %>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/header.ejs'); %>
+        <title>ManageOrder</title>
+</head>
+
+<body>
+    <%- include('./partials/navbar.ejs'); %>
+        <%- include('./partials/sidebar.ejs'); %>
+            <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+
+                <div class="row m-0">
+                    <div class="col-12">
+                        <div class="card my-4">
+                            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                                <div class="shadow-primary border-radius-lg pt-4 pb-3"
+                                    style="background-color: #ba9862;">
+                                    <h3 class="text-white text-capitalize ps-3">Orders Details</h3>
+                                </div>
+                            </div>
+                            <div class="p-0">
+                                <table class="table m-0 p-0 mt-4">
+                                    <thead class="table text-white" style="background-color: #ba9862;">
+                                        <tr>
+                                            <th class="text-center">Customer name</th>
+                                            <th class="text-center">Product</th>
+                                            <th class="text-center">totalamount</th>
+                                            <th class="text-center">PaymentType</th>
+                                            <th class="text-center">Paymentstatus</th>
+                                        </tr>
+                                    </thead>
+                                    <% if(order.length) { %>
+                                        <% for(let x of order) { %>
+                                            <tr class="align-middle">
+                                                <td class="text-center">
+                                                    <%= x.uid.firstname%>
+                                                </td>
+                                                <td class="text-center">
+                                                    <%= x.pid.productid%>
+                                                </td>
+                                                <td class="text-center">
+                                                    <%= x.totalamount%>
+                                                </td>
+                                                <td class="text-center">
+                                                    <%= x.PaymentType%>
+                                                </td>
+                                                <td class="text-center">
+                                                    <%= x.Paymentstatus ? 'paid' : 'unpaid'%>
+                                                </td>
+                                            </tr>
+                                            <% } %>
+                                                <% } %>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <%- include('./partials/script.ejs'); %>
+
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+@media only screen and (max-width:948px) {
+    .wishlist {
+        overflow: auto !important;
+    }
+
+}
